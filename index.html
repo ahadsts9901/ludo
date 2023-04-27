@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+    <title>Ludo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+    <!-- icons cdn -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></link>
+
+    <!-- font cdn -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"></link>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"></link>
+
+    <!-- bootstrap cdn -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script> -->
+    <!-- animate.style cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></link>
+
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
+
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!-- <audio src="./success sound.mp3" id="audio" preload="auto"></audio> -->
+
+    <div class="board">
+        <row>
+            <input readonly="readonly" type="text" class="players player-red"></input>
+
+            <div class="box">
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input blue-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+            </div>
+
+            <input readonly="readonly" type="text" class="players player-blue"></input>
+        </row>
+
+        <row>
+            <div class="box">
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input red-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+            </div>
+
+            <input readonly="readonly" class="center-box" id="win"></input>
+
+            <div class="box">
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+            </div>
+        </row>
+
+        <row>
+            <input readonly="readonly" type="text" class="players player-green"></input>
+
+            <div class="box">
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input green-fill" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+
+                <row>
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+
+                    <input class="input" readonly="readonly" type="text"></input>
+                </row>
+            </div>
+
+            <input readonly="readonly" type="text" class="players player-yellow"></input>
+        </row>
+    </div>
+
+    <hr>
+
+    <p class="center">
+        Thanks For Visiting
+
+        <br> Regards! Muhammad Ahad&copy;
+    </p>
+</body>
