@@ -37,219 +37,598 @@
 </head>
 
 <body>
-    <!-- <audio src="./success sound.mp3" id="audio" preload="auto"></audio> -->
 
-    <div class="board">
-        <row>
-            <input readonly="readonly" type="text" class="players player-red"></input>
+    <h1 class="center">Ludo Game</h1>
+    <p class="center">Play With Friends</p>
+
+    <audio src="./media/audio/dice.mp3" id="dice-audio" preload="auto"></audio>
+    <audio src="./media/audio/finish.mp3" id="finish-audio" preload="auto"></audio>
+
+    <div class="main">
+
+        <div class="board green-path">
+
+            <!-- green path -->
+
+            <row>
+                <p class="players"></p>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="49"></p>
+                        <p class="piece-box" id="50"></p>
+                        <p class="piece-box" id=""></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="48"></p>
+                        <p class="piece-box" id="51"></p>
+                        <p class="piece-box" id="1"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="47"></p>
+                        <p class="piece-box" id="52"></p>
+                        <p class="piece-box" id="2"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="47"></p>
+                        <p class="piece-box" id="53"></p>
+                        <p class="piece-box" id="3"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="46"></p>
+                        <p class="piece-box" id="54"></p>
+                        <p class="piece-box" id="4"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="45"></p>
+                        <p class="piece-box" id="55"></p>
+                        <p class="piece-box" id="5"></p>
+                    </row>
+                </div>
+                <div class="players">
+                    <div class="dice-1">
+                        <p id="dice-1"><i class="bi bi-circle-fill green"></i></p>
+                        <button class="button-1" type="button" onclick=" diceAudio() ;dice1()">
+            Roll Dice
+          </button>
+                        <h2 id="player1"></h2>
+                    </div>
+                </div>
+            </row>
+            <row>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="39"></p>
+                        <p class="piece-box" id="40"></p>
+                        <p class="piece-box" id="41"></p>
+                        <p class="piece-box" id="42"></p>
+                        <p class="piece-box" id="43"></p>
+                        <p class="piece-box" id="44"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="38"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="37"></p>
+                        <p class="piece-box" id="36"></p>
+                        <p class="piece-box" id="35"></p>
+                        <p class="piece-box" id="34"></p>
+                        <p class="piece-box" id="33"></p>
+                        <p class="piece-box" id="32"></p>
+                    </row>
+                </div>
+                <p class="center-box" id="win">
+                    <p>
+                        <div class="box">
+                            <row>
+                                <p class="piece-box" id="6"></p>
+                                <p class="piece-box" id="7"></p>
+                                <p class="piece-box" id="8"></p>
+                                <p class="piece-box" id="9"></p>
+                                <p class="piece-box" id="10"></p>
+                                <p class="piece-box" id="11"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id="12"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id="18"></p>
+                                <p class="piece-box" id="17"></p>
+                                <p class="piece-box" id="16"></p>
+                                <p class="piece-box" id="15"></p>
+                                <p class="piece-box" id="14"></p>
+                                <p class="piece-box" id="13"></p>
+                            </row>
+                        </div>
+            </row>
+            <row>
+                <p class="players"></p>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="31"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="19"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="30"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="20"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="29"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="21"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="28"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="22"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="27"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="23"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="26"></p>
+                        <p class="piece-box" id="25"></p>
+                        <p class="piece-box" id="24"></p>
+                    </row>
+                </div>
+                <p class="players"></p>
+            </row>
+        </div>
+
+        <!-- ............................................................................................................ -->
+
+        <div class="board yellow-path">
+
+            <!-- yellow path -->
+
+            <row>
+                <p class="players"></p>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="137"></p>
+                        <p class="piece-box" id="138"></p>
+                        <p class="piece-box" id="139"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="136"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="140"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="135"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="141"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="134"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="142"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="133"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="143"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="132"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="144"></p>
+                    </row>
+                </div>
+                <div class="players">
+                </div>
+            </row>
+            <row>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="126"></p>
+                        <p class="piece-box" id="127"></p>
+                        <p class="piece-box" id="128"></p>
+                        <p class="piece-box" id="129"></p>
+                        <p class="piece-box" id="130"></p>
+                        <p class="piece-box" id="131"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="125"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="124"></p>
+                        <p class="piece-box" id="123"></p>
+                        <p class="piece-box" id="122"></p>
+                        <p class="piece-box" id="121"></p>
+                        <p class="piece-box" id="120"></p>
+                        <p class="piece-box" id="119"></p>
+                    </row>
+                </div>
+                <p class="center-box" id="win">
+                    <p>
+                        <div class="box">
+                            <row>
+                                <p class="piece-box" id="145"></p>
+                                <p class="piece-box" id="146"></p>
+                                <p class="piece-box" id="147"></p>
+                                <p class="piece-box" id="148"></p>
+                                <p class="piece-box" id="149"></p>
+                                <p class="piece-box" id="150"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id="156"></p>
+                                <p class="piece-box" id="155"></p>
+                                <p class="piece-box" id="154"></p>
+                                <p class="piece-box" id="153"></p>
+                                <p class="piece-box" id="152"></p>
+                                <p class="piece-box" id="151"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id="105"></p>
+                                <p class="piece-box" id="104"></p>
+                                <p class="piece-box" id="103"></p>
+                                <p class="piece-box" id="102"></p>
+                                <p class="piece-box" id="101"></p>
+                                <p class="piece-box" id=""></p>
+                            </row>
+                        </div>
+            </row>
+            <row>
+                <p class="players"></p>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="118"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="106"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="117"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="107"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="116"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="108"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="115"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="109"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="114"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="110"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="113"></p>
+                        <p class="piece-box" id="112"></p>
+                        <p class="piece-box" id="111"></p>
+                    </row>
+                </div>
+                <div class="players">
+                    <div class="dice-1">
+                        <p id="dice-2"><i class="bi bi-circle-fill yellow"></i></p>
+                        <button class="button-2" type="button" onclick=" diceAudio() ;dice2()">
+            Roll Dice
+          </button>
+                        <h2 id="player2"></h2>
+                    </div>
+                </div>
+            </row>
+        </div>
+
+        <!-- ............................................................................................................ -->
+
+        <div class="board blue-path">
+
+            <!-- blue path -->
+
+            <row>
+                <p class="players"></p>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="224"></p>
+                        <p class="piece-box" id="225"></p>
+                        <p class="piece-box" id="226"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="223"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="227"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="222"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="228"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="221"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="229"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="220"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="230"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="219"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="231"></p>
+                    </row>
+                </div>
+                <div class="players">
+                </div>
+            </row>
+            <row>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="213"></p>
+                        <p class="piece-box" id="214"></p>
+                        <p class="piece-box" id="215"></p>
+                        <p class="piece-box" id="216"></p>
+                        <p class="piece-box" id="217"></p>
+                        <p class="piece-box" id="218"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="212"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id=""></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="211"></p>
+                        <p class="piece-box" id="210"></p>
+                        <p class="piece-box" id="209"></p>
+                        <p class="piece-box" id="208"></p>
+                        <p class="piece-box" id="207"></p>
+                        <p class="piece-box" id="206"></p>
+                    </row>
+                </div>
+                <p class="center-box" id="win">
+                    <p>
+                        <div class="box">
+                            <row>
+                                <p class="piece-box" id="232"></p>
+                                <p class="piece-box" id="233"></p>
+                                <p class="piece-box" id="234"></p>
+                                <p class="piece-box" id="235"></p>
+                                <p class="piece-box" id="236"></p>
+                                <p class="piece-box" id="237"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id="238"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id="244"></p>
+                                <p class="piece-box" id="243"></p>
+                                <p class="piece-box" id="242"></p>
+                                <p class="piece-box" id="241"></p>
+                                <p class="piece-box" id="240"></p>
+                                <p class="piece-box" id="239"></p>
+                            </row>
+                        </div>
+            </row>
+            <row>
+                <div class="players">
+                    <div class="dice-1">
+                        <p id="dice-3"><i class="bi bi-circle-fill blue"></i></p>
+                        <button class="button-3" type="button" onclick=" diceAudio() ;dice3()">
+                Roll Dice
+              </button>
+                        <h2 id="player3"></h2>
+                    </div>
+                </div>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="205"></p>
+                        <p class="piece-box" id="256"></p>
+                        <p class="piece-box" id="245"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="204"></p>
+                        <p class="piece-box" id="255"></p>
+                        <p class="piece-box" id="246"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="203"></p>
+                        <p class="piece-box" id="254"></p>
+                        <p class="piece-box" id="247"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="202"></p>
+                        <p class="piece-box" id="253"></p>
+                        <p class="piece-box" id="248"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="201"></p>
+                        <p class="piece-box" id="252"></p>
+                        <p class="piece-box" id="249"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="251"></p>
+                        <p class="piece-box" id="250"></p>
+                    </row>
+                </div>
+                <div class="players"></div>
+            </row>
+        </div>
+
+        <!-- ............................................................................................................ -->
+
+        <div class="board red-path">
+
+            <!-- red path -->
+
+            <row>
+                <div class="players">
+                    <div class="dice-1">
+                        <p id="dice-4"><i class="bi bi-circle-fill red"></i></p>
+                        <button class="button-4" type="button" onclick=" diceAudio() ;dice4()">
+                Roll Dice
+              </button>
+                        <h2 id="player4"></h2>
+                    </div>
+                </div>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="311"></p>
+                        <p class="piece-box" id="312"></p>
+                        <p class="piece-box" id="313"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="310"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="314"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="309"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="315"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="308"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="316"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="307"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="317"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="306"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="318"></p>
+                    </row>
+                </div>
+                <div class="players">
+                </div>
+            </row>
+            <row>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="301"></p>
+                        <p class="piece-box" id="302"></p>
+                        <p class="piece-box" id="303"></p>
+                        <p class="piece-box" id="304"></p>
+                        <p class="piece-box" id="305"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="351"></p>
+                        <p class="piece-box" id="352"></p>
+                        <p class="piece-box" id="353"></p>
+                        <p class="piece-box" id="354"></p>
+                        <p class="piece-box" id="355"></p>
+                        <p class="piece-box" id="356"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="350"></p>
+                        <p class="piece-box" id="349"></p>
+                        <p class="piece-box" id="348"></p>
+                        <p class="piece-box" id="347"></p>
+                        <p class="piece-box" id="346"></p>
+                        <p class="piece-box" id="345"></p>
+                    </row>
+                </div>
+                <p class="center-box" id="win">
+                    <p>
+                        <div class="box">
+                            <row>
+                                <p class="piece-box" id="319"></p>
+                                <p class="piece-box" id="320"></p>
+                                <p class="piece-box" id="321"></p>
+                                <p class="piece-box" id="322"></p>
+                                <p class="piece-box" id="323"></p>
+                                <p class="piece-box" id="324"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id=""></p>
+                                <p class="piece-box" id="325"></p>
+                            </row>
+                            <row>
+                                <p class="piece-box" id="331"></p>
+                                <p class="piece-box" id="330"></p>
+                                <p class="piece-box" id="329"></p>
+                                <p class="piece-box" id="328"></p>
+                                <p class="piece-box" id="327"></p>
+                                <p class="piece-box" id="326"></p>
+                            </row>
+                        </div>
+            </row>
+            <row>
+                <div class="players"></div>
+                <div class="box">
+                    <row>
+                        <p class="piece-box" id="344"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="332"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="343"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="333"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="342"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="334"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="341"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="335"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="340"></p>
+                        <p class="piece-box" id=""></p>
+                        <p class="piece-box" id="336"></p>
+                    </row>
+                    <row>
+                        <p class="piece-box" id="339"></p>
+                        <p class="piece-box" id="338"></p>
+                        <p class="piece-box" id="337"></p>
+                    </row>
+                </div>
+                <div class="players"></div>
+            </row>
+        </div>
 
-            <div class="box">
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
 
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input blue-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-            </div>
-
-            <input readonly="readonly" type="text" class="players player-blue"></input>
-        </row>
-
-        <row>
-            <div class="box">
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input red-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-            </div>
-
-            <input readonly="readonly" class="center-box" id="win"></input>
-
-            <div class="box">
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input yellow-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-            </div>
-        </row>
-
-        <row>
-            <input readonly="readonly" type="text" class="players player-green"></input>
-
-            <div class="box">
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input green-fill" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-
-                <row>
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-
-                    <input class="input" readonly="readonly" type="text"></input>
-                </row>
-            </div>
-
-            <input readonly="readonly" type="text" class="players player-yellow"></input>
-        </row>
     </div>
 
     <hr>
-
     <p class="center">
         Thanks For Visiting
-
         <br> Regards! Muhammad Ahad&copy;
     </p>
 </body>
