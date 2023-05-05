@@ -8,19 +8,19 @@ let player2 = prompt("Enter Player 2 Name");
 let player3 = prompt("Enter Player 3 Name");
 let player4 = prompt("Enter Player 4 Name");
 
-if (player1 === "") {
+if (player1 === "" || player1 === null) {
     player1 = "Player Green";
 }
 
-if (player2 === "") {
+if (player2 === "" || player2 === null) {
     player2 = "Player Yellow";
 }
 
-if (player3 === "") {
+if (player3 === "" || player3 === null) {
     player3 = "Player Blue";
 }
 
-if (player4 === "") {
+if (player4 === "" || player4 === null) {
     player4 = "Player Red";
 }
 
