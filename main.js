@@ -8,6 +8,11 @@ let player2 = "Player Yellow";
 let player3 = "Player Blue";
 let player4 = "Player Red";
 
+document.getElementById("player1").innerHTML = player1;
+document.getElementById("player2").innerHTML = player2;
+document.getElementById("player3").innerHTML = player3;
+document.getElementById("player4").innerHTML = player4;
+
 function diceAudio() {
     document.getElementById("dice-audio").play();
 }
@@ -115,21 +120,21 @@ function dice1() {
     if (gPlayerSum == 55) {
         finishAudio();
         alert(`${player1} Won`);
-        // document.getElementById('guide').innerHTML = `${player1} Won`
-        // document.querySelector(".button-1").disabled = true;
-        // document.querySelector(".button-2").disabled = true;
-        // document.querySelector(".button-3").disabled = true;
-        // document.querySelector(".button-4").disabled = true;
+        document.getElementById("guide").innerHTML = `${player1} Won`;
+        document.querySelector(".button-1").disabled = true;
+        document.querySelector(".button-2").disabled = true;
+        document.querySelector(".button-3").disabled = true;
+        document.querySelector(".button-4").disabled = true;
     }
     document.getElementById(`${gPlayerSum + 1}`).innerHTML =
         '<i class="bi bi-circle-fill green"></i>';
 
-    // document.getElementById('guide').innerHTML = `${player2} Turn`
+    document.getElementById("guide").innerHTML = `${player2} Turn`;
 
-    // document.querySelector(".button-1").disabled = false;
-    // document.querySelector(".button-2").disabled = false;
-    // document.querySelector(".button-3").disabled = false;
-    // document.querySelector(".button-4").disabled = false;
+    document.querySelector(".button-1").disabled = true;
+    document.querySelector(".button-2").disabled = false;
+    document.querySelector(".button-3").disabled = true;
+    document.querySelector(".button-4").disabled = true;
 
     console.log(gPlayerSum);
 }
@@ -236,21 +241,21 @@ function dice2() {
     if (yPlayerSum == 156) {
         finishAudio();
         alert(`${player2} Won`);
-        // document.getElementById('guide').innerHTML = `${player2} Won`
-        // document.querySelector(".button-1").disabled = true;
-        // document.querySelector(".button-2").disabled = true;
-        // document.querySelector(".button-3").disabled = true;
-        // document.querySelector(".button-4").disabled = true;
+        document.getElementById("guide").innerHTML = `${player2} Won`;
+        document.querySelector(".button-1").disabled = true;
+        document.querySelector(".button-2").disabled = true;
+        document.querySelector(".button-3").disabled = true;
+        document.querySelector(".button-4").disabled = true;
     }
     document.getElementById(`${yPlayerSum + 1}`).innerHTML =
         '<i class="bi bi-circle-fill yellow"></i>';
 
-    // document.getElementById('guide').innerHTML = `${player2} Turn`
+    document.getElementById("guide").innerHTML = `${player3} Turn`;
 
-    // document.querySelector(".button-1").disabled = true;
-    // document.querySelector(".button-2").disabled = true;
-    // document.querySelector(".button-3").disabled = false;
-    // document.querySelector(".button-4").disabled = true;
+    document.querySelector(".button-1").disabled = true;
+    document.querySelector(".button-2").disabled = true;
+    document.querySelector(".button-3").disabled = false;
+    document.querySelector(".button-4").disabled = true;
 
     console.log(yPlayerSum);
 }
@@ -357,21 +362,21 @@ function dice3() {
     if (bPlayerSum == 256) {
         finishAudio();
         alert(`${player3} Won`);
-        // document.getElementById('guide').innerHTML = `${player3} Won`
-        // document.querySelector(".button-1").disabled = true;
-        // document.querySelector(".button-2").disabled = true;
-        // document.querySelector(".button-3").disabled = true;
-        // document.querySelector(".button-4").disabled = true;
+        document.getElementById("guide").innerHTML = `${player3} Won`;
+        document.querySelector(".button-1").disabled = true;
+        document.querySelector(".button-2").disabled = true;
+        document.querySelector(".button-3").disabled = true;
+        document.querySelector(".button-4").disabled = true;
     }
     document.getElementById(`${bPlayerSum + 1}`).innerHTML =
         '<i class="bi bi-circle-fill blue"></i>';
 
-    // document.getElementById('guide').innerHTML = `${player3} Turn`
+    document.getElementById("guide").innerHTML = `${player4} Turn`;
 
-    // document.querySelector(".button-1").disabled = true;
-    // document.querySelector(".button-2").disabled = true;
-    // document.querySelector(".button-3").disabled = true;
-    // document.querySelector(".button-4").disabled = false;
+    document.querySelector(".button-1").disabled = true;
+    document.querySelector(".button-2").disabled = true;
+    document.querySelector(".button-3").disabled = true;
+    document.querySelector(".button-4").disabled = false;
 
     console.log(bPlayerSum);
 }
@@ -471,7 +476,6 @@ function dice4() {
     document.getElementById("355").innerHTML = "";
     document.getElementById("356").innerHTML = "";
 
-
     if (rPlayerSum > 356) {
         rPlayerSum = rPlayerSum - number;
     }
@@ -479,21 +483,21 @@ function dice4() {
     if (rPlayerSum == 356) {
         finishAudio();
         alert(`${player4} Won`);
-        // document.getElementById('guide').innerHTML = `${player4} Won`
-        // document.querySelector(".button-1").disabled = true;
-        // document.querySelector(".button-2").disabled = true;
-        // document.querySelector(".button-3").disabled = true;
-        // document.querySelector(".button-4").disabled = true;
+        document.getElementById("guide").innerHTML = `${player4} Won`;
+        document.querySelector(".button-1").disabled = true;
+        document.querySelector(".button-2").disabled = true;
+        document.querySelector(".button-3").disabled = true;
+        document.querySelector(".button-4").disabled = true;
     }
     document.getElementById(`${rPlayerSum + 1}`).innerHTML =
         '<i class="bi bi-circle-fill red"></i>';
 
-    // document.getElementById('guide').innerHTML = `${player4} Turn`
+    document.getElementById("guide").innerHTML = `${player1} Turn`;
 
-    // document.querySelector(".button-1").disabled = false;
-    // document.querySelector(".button-2").disabled = true;
-    // document.querySelector(".button-3").disabled = true;
-    // document.querySelector(".button-4").disabled = true;
+    document.querySelector(".button-1").disabled = false;
+    document.querySelector(".button-2").disabled = true;
+    document.querySelector(".button-3").disabled = true;
+    document.querySelector(".button-4").disabled = true;
 
     console.log(rPlayerSum);
 }
