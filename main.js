@@ -3,10 +3,10 @@ let yPlayerSum = 100;
 let bPlayerSum = 200;
 let rPlayerSum = 300;
 
-let player1 = prompt('Enter Player 1 Name');
-let player2 = prompt('Enter Player 2 Name');
-let player3 = prompt('Enter Player 3 Name');
-let player4 = prompt('Enter Player 4 Name');
+let player1 = prompt("Enter Player 1 Name");
+let player2 = prompt("Enter Player 2 Name");
+let player3 = prompt("Enter Player 3 Name");
+let player4 = prompt("Enter Player 4 Name");
 
 if (player1 === "") {
     player1 = "Player Green";
