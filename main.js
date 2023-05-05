@@ -3,10 +3,26 @@ let yPlayerSum = 100;
 let bPlayerSum = 200;
 let rPlayerSum = 300;
 
-let player1 = "Player Green";
-let player2 = "Player Yellow";
-let player3 = "Player Blue";
-let player4 = "Player Red";
+let player1 = prompt('Enter Player 1 Name');
+let player2 = prompt('Enter Player 2 Name');
+let player3 = prompt('Enter Player 3 Name');
+let player4 = prompt('Enter Player 4 Name');
+
+if (player1 === "") {
+    player1 = "Player Green";
+}
+
+if (player2 === "") {
+    player2 = "Player Yellow";
+}
+
+if (player3 === "") {
+    player3 = "Player Blue";
+}
+
+if (player4 === "") {
+    player4 = "Player Red";
+}
 
 document.getElementById("player1").innerHTML = player1;
 document.getElementById("player2").innerHTML = player2;
